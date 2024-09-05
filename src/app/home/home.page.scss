@@ -1,0 +1,49 @@
+ion-header,
+ion-footer {
+  --background: #5d3fd3;
+  --color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+ion-content {
+  --background: #0d0907;
+}
+ion-button.converter-button {
+  margin: 20px;
+}
+ion-toolbar,
+ion-button.converter-button {
+  --background: #5d3fd3;
+  --color: #fff;
+}
+ion-card {
+  margin: 20px;
+}
+
+ion-button {
+  margin-top: 20px;
+}
+
+ion-card-title {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+ion-card-content p {
+  font-size: 1.1em;
+  color: #5d3fd3;
+}
+
+.github-link {
+  color: #5d3fd3;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #7f00ff;
+  }
+}

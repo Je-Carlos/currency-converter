@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Conversor de Moedas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Converter Moeda</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label position="floating">Moeda Origem</ion-label>
+        <ion-select [(ngModel)]="moedaOrigem">
+          <ion-select-option value="USD">Dólar</ion-select-option>
+          <ion-select-option value="BRL">Real</ion-select-option>
+          <!-- Adicione mais opções conforme necessário -->
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Moeda Destino</ion-label>
+        <ion-select [(ngModel)]="moedaDestino">
+          <ion-select-option value="USD">Dólar</ion-select-option>
+          <ion-select-option value="BRL">Real</ion-select-option>
+          <!-- Adicione mais opções conforme necessário -->
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">Valor</ion-label>
+        <ion-input type="number" [(ngModel)]="valor" (focus)="limparValor()"></ion-input>
+      </ion-item>
+
+      <ion-button expand="full" class="converter-button" (click)="converter()">Converter</ion-button>
+
+      <ion-card *ngIf="resultado">
+        <ion-card-header>
+          <ion-card-title>Resultado</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <p>{{ resultado }}</p>
+        </ion-card-content>
+      </ion-card>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light">
+    <ion-title size="small">Desenvolvido por
+      <a href="https://github.com/Je-Carlos" target="_blank" rel="noopener noreferrer" class="github-link">
+        Jean Carlos Cotillo Berg
+      </a></ion-title>
+  </ion-toolbar>
+</ion-footer>
